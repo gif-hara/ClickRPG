@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace ClickRPG
 {
     public sealed class UIViewBattle : UIView
