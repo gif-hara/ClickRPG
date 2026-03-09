@@ -405,6 +405,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: brain
+      value: 8726729447078101077
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: 'managedReferences[8726729447078101077]'
+      value: ClickRPG ClickRPG.CharacterControllers.Brains.Player
+      objectReference: {fileID: 0}
     - target: {fileID: 112509593415485632, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: m_Name
       value: Character.Player
