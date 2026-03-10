@@ -27,8 +27,11 @@ namespace ClickRPG.CharacterControllers
         {
             foreach (var ability in abilities)
             {
-                ability.Initialize(this);
                 abilityMap[ability.GetType()] = ability;
+            }
+            foreach (var ability in abilities)
+            {
+                ability.Initialize(this);
             }
             brainController.Setup(this, brain);
         }
