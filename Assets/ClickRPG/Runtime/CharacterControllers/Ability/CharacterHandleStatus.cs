@@ -1,0 +1,32 @@
+using System;
+using R3;
+using UnityEngine;
+
+namespace ClickRPG.CharacterControllers.Abilities
+{
+    [Serializable]
+    public sealed class CharacterHandleStatus : ICharacterAbility
+    {
+        [SerializeField]
+        private CharacterStatus baseStatus = null!;
+
+        private readonly ReactiveProperty<int> hitPoint = new();
+
+        public ReadOnlyReactiveProperty<int> HitPoint => hitPoint;
+
+        private readonly ReactiveProperty<int> strength = new();
+
+        public ReadOnlyReactiveProperty<int> Strength => strength;
+
+        private readonly ReactiveProperty<int> cooldownLevel = new();
+
+        public ReadOnlyReactiveProperty<int> CooldownLevel => cooldownLevel;
+
+        public void Initialize(Character character)
+        {
+            hitPoint.Value = baseStatus.HitPoint;
+            strength.Value = baseStatus.Strength;
+            cooldownLevel.Value = baseStatus.CooldownLevel;
+        }
+    }
+}
