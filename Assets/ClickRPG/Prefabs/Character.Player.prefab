@@ -241,8 +241,8 @@ Transform:
   m_GameObject: {fileID: 3859714458298595658}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.25, y: 1, z: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7393040889163708981}
@@ -413,6 +413,18 @@ PrefabInstance:
       propertyPath: 'managedReferences[8726729447078101077]'
       value: ClickRPG ClickRPG.CharacterControllers.Brains.Player
       objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].worldCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
     - target: {fileID: 112509593415485632, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: m_Name
       value: Character.Player
