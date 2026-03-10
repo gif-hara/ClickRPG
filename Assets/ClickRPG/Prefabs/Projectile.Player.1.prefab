@@ -192,7 +192,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: actions.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: 'actions.Array.data[0]'
@@ -201,6 +201,10 @@ PrefabInstance:
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: 'actions.Array.data[1]'
       value: 8726729464421285972
+      objectReference: {fileID: 0}
+    - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
+      propertyPath: 'actions.Array.data[2]'
+      value: 8726729464421285992
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: 'managedReferences[-2]'
@@ -215,11 +219,19 @@ PrefabInstance:
       value: ClickRPG ClickRPG.ProjectileControllers.Actions.Release
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
+      propertyPath: 'managedReferences[8726729464421285992]'
+      value: ClickRPG ClickRPG.ProjectileControllers.Actions.GiveDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: managedReferences[8726729464421285969].speed
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: managedReferences[8726729464421285972].delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
+      propertyPath: managedReferences[8726729464421285992].power
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7268346679708236256, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
@@ -319,7 +331,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
