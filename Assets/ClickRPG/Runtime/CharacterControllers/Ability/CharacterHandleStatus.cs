@@ -22,11 +22,23 @@ namespace ClickRPG.CharacterControllers.Abilities
 
         public ReadOnlyReactiveProperty<int> CooldownLevel => cooldownLevel;
 
+        private Character character = null!;
+
         public void Initialize(Character character)
         {
+            this.character = character;
             hitPoint.Value = baseStatus.HitPoint;
             strength.Value = baseStatus.Strength;
             cooldownLevel.Value = baseStatus.CooldownLevel;
+        }
+
+        public void TakeDamage(int damage)
+        {
+            hitPoint.Value = Mathf.Max(hitPoint.Value - damage, 0);
+            if (hitPoint.Value == 0)
+            {
+                UnityEngine.Object.Destroy(character.gameObject);
+            }
         }
     }
 }
