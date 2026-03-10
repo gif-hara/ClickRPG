@@ -1,4 +1,5 @@
 using System;
+using ClickRPG.ProjectileControllers;
 using R3;
 using R3.Triggers;
 using UnityEngine;
@@ -15,17 +16,28 @@ namespace ClickRPG.CharacterControllers.Brains
         [SerializeField]
         private Transform muzzleObject = null!;
 
+        [SerializeField]
+        private Projectile projectilePrefab = null!;
+
         public void Attach(Character character, CompositeDisposable scope)
         {
             character.UpdateAsObservable()
-                .Subscribe(this, static (_, @this) =>
+                .Subscribe((this, character), static (_, state) =>
                 {
+                    var (@this, character) = state;
                     var mousePosition = Mouse.current.position.ReadValue();
                     var worldPosition = @this.worldCamera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, @this.worldCamera.nearClipPlane));
 
                     var direction = worldPosition - @this.muzzleObject.position;
                     var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                    @this.muzzleObject.rotation = Quaternion.Euler(0, 0, angle - 90);
+                    @this.muzzleObject.rotation = Quaternion.Euler(0, 0, angle);
+
+                    if (Mouse.current.leftButton.wasPressedThisFrame)
+                    {
+                        var projectile = @this.projectilePrefab.Spawn(character);
+                        projectile.transform.position = @this.muzzleObject.position;
+                        projectile.transform.rotation = @this.muzzleObject.rotation;
+                    }
                 })
                 .AddTo(scope);
         }
