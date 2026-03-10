@@ -19,6 +19,8 @@ namespace ClickRPG.ProjectileControllers
 
         public CompositeDisposable Scope { get; } = new();
 
+        public Character Owner { get; private set; } = null!;
+
         public Projectile Spawn(Character owner)
         {
             pool ??= new ObjectPool<Projectile>(
@@ -32,6 +34,7 @@ namespace ClickRPG.ProjectileControllers
                 );
             var instance = pool.Get();
             instance.pool = pool;
+            instance.Owner = owner;
             foreach (var action in instance.actions)
             {
                 action.Invoke(instance);
