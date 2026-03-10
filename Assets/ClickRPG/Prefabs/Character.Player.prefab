@@ -213,7 +213,39 @@ Transform:
   m_Children:
   - {fileID: 3103479015453963676}
   - {fileID: 4154518347828046520}
+  - {fileID: 8808609549714445116}
   m_Father: {fileID: 4066561737044013996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3122892577989533890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8808609549714445116}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8808609549714445116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3122892577989533890}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.908, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7393040889163708981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3859714458298595658
 GameObject:
@@ -421,6 +453,10 @@ PrefabInstance:
       propertyPath: managedReferences[8726729447078101077].muzzleObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].firePointObject
+      value: 
+      objectReference: {fileID: 8808609549714445116}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].projectilePrefab
       value: 
