@@ -7,11 +7,15 @@ namespace ClickRPG.CharacterControllers
     [Serializable]
     public class CharacterBrainController
     {
-        private CompositeDisposable scope;
+        private readonly CompositeDisposable scope = new();
 
         public void Setup(Character character, ICharacterBrain brain)
         {
-            scope = new CompositeDisposable();
+            scope.Clear();
+            if (brain == null)
+            {
+                return;
+            }
             brain.Attach(character, scope);
             scope.RegisterTo(character.destroyCancellationToken);
         }
