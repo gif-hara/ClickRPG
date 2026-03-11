@@ -17,10 +17,7 @@ namespace ClickRPG.CharacterControllers.Brains
         private Transform muzzleObject = null!;
 
         [SerializeField]
-        private Transform firePointObject = null!;
-
-        [SerializeField]
-        private Projectile projectilePrefab = null!;
+        private Muzzle muzzle = null!;
 
         public void Attach(Character character, CompositeDisposable scope)
         {
@@ -35,11 +32,9 @@ namespace ClickRPG.CharacterControllers.Brains
                     var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                     @this.muzzleObject.rotation = Quaternion.Euler(0, 0, angle);
 
-                    if (Mouse.current.leftButton.wasPressedThisFrame)
+                    if (Mouse.current.leftButton.isPressed)
                     {
-                        var projectile = @this.projectilePrefab.Spawn(character);
-                        projectile.transform.position = @this.firePointObject.position;
-                        projectile.transform.rotation = @this.firePointObject.rotation;
+                        @this.muzzle.Fire(character);
                     }
                 })
                 .AddTo(scope);
