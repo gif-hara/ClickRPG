@@ -19,11 +19,11 @@ namespace ClickRPG.CharacterControllers
 
         private readonly CharacterBrainController brainController = new();
 
-        private ReactiveProperty<int> hitPoint = new();
+        private readonly ReactiveProperty<int> hitPoint = new();
 
         public ReadOnlyReactiveProperty<int> HitPoint => hitPoint;
 
-        private ReactiveProperty<int> strength = new();
+        private readonly ReactiveProperty<int> strength = new();
 
         public ReadOnlyReactiveProperty<int> Strength => strength;
 
