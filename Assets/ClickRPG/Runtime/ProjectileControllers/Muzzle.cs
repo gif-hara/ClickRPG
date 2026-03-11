@@ -36,8 +36,7 @@ namespace ClickRPG.ProjectileControllers
         {
             for (int i = 0; i < spawnCount; i++)
             {
-                var projectile = projectilePrefab.Spawn(owner);
-                projectile.transform.SetPositionAndRotation(firePoint.position, firePoint.rotation);
+                var projectile = projectilePrefab.Spawn(owner, firePoint.position, firePoint.rotation);
             }
             canFire = false;
             var coolTime = Mathf.Max(this.coolTime - owner.CooldownLevel.CurrentValue * (1 / 60.0f), 0f);
