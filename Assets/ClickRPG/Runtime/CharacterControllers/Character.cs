@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using ClickRPG.CharacterControllers.Abilities;
 using ClickRPG.CharacterControllers.Brains;
+using R3;
 using SoulLike;
 using UnityEngine;
 
@@ -12,10 +10,8 @@ namespace ClickRPG.CharacterControllers
         [SerializeReference, SubclassSelector]
         private ICharacterBrain brain = null!;
 
-        [SerializeReference, SubclassSelector]
-        private ICharacterAbility[] abilities = null!;
-
-        private readonly Dictionary<Type, ICharacterAbility> abilityMap = new();
+        [SerializeField]
+        private CharacterStatus baseStatus = null!;
 
         private readonly MessageBroker broker = new();
 
@@ -23,33 +19,26 @@ namespace ClickRPG.CharacterControllers
 
         private readonly CharacterBrainController brainController = new();
 
+        private ReactiveProperty<int> hitPoint = new();
+
+        public ReadOnlyReactiveProperty<int> HitPoint => hitPoint;
+
+        private ReactiveProperty<int> strength = new();
+
+        public ReadOnlyReactiveProperty<int> Strength => strength;
+
         void Awake()
         {
-            foreach (var ability in abilities)
-            {
-                abilityMap[ability.GetType()] = ability;
-            }
-            foreach (var ability in abilities)
-            {
-                ability.Initialize(this);
-            }
             brainController.Setup(this, brain);
         }
 
-        public T GetAbility<T>() where T : ICharacterAbility
+        public void TakeDamage(int damage)
         {
-            return (T)abilityMap[typeof(T)];
-        }
-
-        public bool TryGetAbility<T>(out T ability) where T : ICharacterAbility
-        {
-            if (abilityMap.TryGetValue(typeof(T), out var foundAbility))
+            hitPoint.Value = Mathf.Max(hitPoint.Value - damage, 0);
+            if (hitPoint.Value == 0)
             {
-                ability = (T)foundAbility;
-                return true;
+                Destroy(gameObject);
             }
-            ability = default!;
-            return false;
         }
     }
 }
