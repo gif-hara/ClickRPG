@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ClickRPG.CharacterControllers.Brains;
 using R3;
 using SoulLike;
@@ -40,6 +41,54 @@ namespace ClickRPG.CharacterControllers
             if (hitPoint.Value == 0)
             {
                 Destroy(gameObject);
+            }
+        }
+
+        public void ApplySkills(List<Skill> skills)
+        {
+            foreach (var skill in skills)
+            {
+                switch (skill.Type)
+                {
+                    case CharacterSkillType.NormalBullet:
+                        break;
+                    case CharacterSkillType.Shotgun:
+                        break;
+                    case CharacterSkillType.MachineGun:
+                        break;
+                    case CharacterSkillType.Sniper:
+                        break;
+                    case CharacterSkillType.Laser:
+                        break;
+                    case CharacterSkillType.Horming:
+                        break;
+                    case CharacterSkillType.HitPointUp:
+                        hitPoint.Value += skill.Power;
+                        break;
+                    case CharacterSkillType.StrengthUp:
+                        strength.Value += skill.Power;
+                        break;
+                    case CharacterSkillType.CooldownLevelUp:
+                        break;
+                    case CharacterSkillType.CriticalRateUp:
+                        break;
+                    case CharacterSkillType.CriticalDamageUp:
+                        break;
+                    case CharacterSkillType.CooldownWhenCritical:
+                        break;
+                    case CharacterSkillType.StrengthUpWhenDefeatEnemy:
+                        break;
+                    case CharacterSkillType.CriticalRateUpWhenDefeatEnemy:
+                        break;
+                    case CharacterSkillType.PenetrateUp:
+                        break;
+                    case CharacterSkillType.BulletSpeedUp:
+                        break;
+                    case CharacterSkillType.ExperienceUp:
+                        break;
+                    case CharacterSkillType.RecoveryWhenDefeatEnemy:
+                        break;
+                }
             }
         }
     }
