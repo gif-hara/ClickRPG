@@ -23,11 +23,10 @@ namespace ClickRPG.ProjectileControllers.Actions
                     {
                         return;
                     }
-                    if (collision.attachedRigidbody.TryGetComponent<Character>(out var target) && target.TryGetAbility<CharacterHandleStatus>(out var targetHandleStatus))
+                    if (collision.attachedRigidbody.TryGetComponent<Character>(out var target))
                     {
-                        var ownerHandleStatus = projectile.Owner.GetAbility<CharacterHandleStatus>();
-                        var damage = (int)(ownerHandleStatus.Strength.CurrentValue * self.power);
-                        targetHandleStatus.TakeDamage(damage);
+                        var damage = (int)(projectile.Owner.Strength.CurrentValue * self.power);
+                        target.TakeDamage(damage);
                         projectile.Release();
                     }
                 })
