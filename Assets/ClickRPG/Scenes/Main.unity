@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000a9ee822a
+  m_ApplyToSortingLayers: 00000000a9ee822a0b2ebe34
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -501,11 +501,131 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1292857054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1292857055}
+  - component: {fileID: 1292857056}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1292857055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292857054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1292857056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292857054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce0befeba419a64c97879510602de59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ClickRPG::ClickRPG.MainSceneController
+  userData:
+    <Skills>k__BackingField:
+    - <Type>k__BackingField: 7
+      <Power>k__BackingField: 30
+  player: {fileID: 1412862414}
+  uiViews: []
+--- !u!114 &1412862414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2959929648261043889, guid: 5c060d80ae526a24aa1b069daf720667, type: 3}
+  m_PrefabInstance: {fileID: 435800049}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27060deb62bd1174d8f48ef9799ee8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ClickRPG::ClickRPG.CharacterControllers.Character
+--- !u!1001 &1928551432
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4024369720686143140, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_Name
+      value: Character.Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 1292857055}
   - {fileID: 570683200}
   - {fileID: 435800049}
+  - {fileID: 1928551432}
