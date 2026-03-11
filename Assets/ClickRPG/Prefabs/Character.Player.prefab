@@ -483,6 +483,7 @@ Transform:
   - {fileID: 8465703013857804518}
   - {fileID: 4295883586995689785}
   - {fileID: 3852769415327553560}
+  - {fileID: 6715420278685874398}
   m_Father: {fileID: 7393040889163708981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3170880750568457900
@@ -508,6 +509,37 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3170880750568457900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8808609549714445116}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3659949118489097374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6715420278685874398}
+  m_Layer: 6
+  m_Name: Shotgun.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6715420278685874398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659949118489097374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 0}
@@ -1171,7 +1203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: 'managedReferences[8726729447078101077].muzzleSkillTypes.Array.data[0]'
@@ -1214,7 +1246,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[0].<Levels>k__BackingField.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.size
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
@@ -1240,6 +1280,30 @@ PrefabInstance:
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[0].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[0].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[0].coolTime
@@ -1323,6 +1387,94 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[0].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[5].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[0].coolTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[1].coolTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[0].coolTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[1].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[0].coolTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[1].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[2].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[0].coolTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[1].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[2].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[3].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[0].coolTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[1].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[2].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[3].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[4].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[0].coolTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[1].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[2].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[3].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[4].coolTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[5].coolTime
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
@@ -1410,6 +1562,94 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3852769415327553560}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[0].firePoint
+      value: 
+      objectReference: {fileID: 6715420278685874398}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[1].firePoint
+      value: 
+      objectReference: {fileID: 6715420278685874398}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[0].firePoint
+      value: 
+      objectReference: {fileID: 6715420278685874398}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[1].firePoint
+      value: 
+      objectReference: {fileID: 2961147187280210392}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[0].firePoint
+      value: 
+      objectReference: {fileID: 6715420278685874398}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[1].firePoint
+      value: 
+      objectReference: {fileID: 7874700570855501039}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[2].firePoint
+      value: 
+      objectReference: {fileID: 7378872206833816090}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[0].firePoint
+      value: 
+      objectReference: {fileID: 6715420278685874398}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[1].firePoint
+      value: 
+      objectReference: {fileID: 6592262283251611855}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[2].firePoint
+      value: 
+      objectReference: {fileID: 2154413181547981996}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[3].firePoint
+      value: 
+      objectReference: {fileID: 2779721112648427181}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[0].firePoint
+      value: 
+      objectReference: {fileID: 6715420278685874398}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[1].firePoint
+      value: 
+      objectReference: {fileID: 2619632495255614638}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[2].firePoint
+      value: 
+      objectReference: {fileID: 7646907397533052586}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[3].firePoint
+      value: 
+      objectReference: {fileID: 4044738560457048858}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[4].firePoint
+      value: 
+      objectReference: {fileID: 840858962842402937}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[0].firePoint
+      value: 
+      objectReference: {fileID: 6715420278685874398}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[1].firePoint
+      value: 
+      objectReference: {fileID: 1020166359561565106}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[2].firePoint
+      value: 
+      objectReference: {fileID: 3996196798807037807}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[3].firePoint
+      value: 
+      objectReference: {fileID: 8465703013857804518}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[4].firePoint
+      value: 
+      objectReference: {fileID: 4295883586995689785}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[5].firePoint
+      value: 
+      objectReference: {fileID: 3852769415327553560}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[0].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[0].spawnCount
       value: 1
       objectReference: {fileID: 0}
@@ -1494,6 +1734,94 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[0].spawnCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[1].spawnCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[0].spawnCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[1].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[0].spawnCount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[1].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[2].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[0].spawnCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[1].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[2].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[3].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[0].spawnCount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[1].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[2].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[3].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[4].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[0].spawnCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[1].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[2].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[3].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[4].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[5].spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[0].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[0].projectilePrefab
       value: 
       objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
@@ -1575,6 +1903,94 @@ PrefabInstance:
       objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[0].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[5].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[0].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: 7168cfcc6c041db409cf47588957de01, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[0].<Muzzles>k__BackingField.Array.data[1].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: 7168cfcc6c041db409cf47588957de01, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[0].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: 7168cfcc6c041db409cf47588957de01, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[1].<Muzzles>k__BackingField.Array.data[1].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[0].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: 7168cfcc6c041db409cf47588957de01, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[1].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[2].<Muzzles>k__BackingField.Array.data[2].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[0].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: 7168cfcc6c041db409cf47588957de01, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[1].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[2].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[3].<Muzzles>k__BackingField.Array.data[3].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[0].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: 7168cfcc6c041db409cf47588957de01, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[1].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[2].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[3].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[4].<Muzzles>k__BackingField.Array.data[4].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[0].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: 7168cfcc6c041db409cf47588957de01, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[1].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[2].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[3].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[4].projectilePrefab
+      value: 
+      objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.data[1].<Levels>k__BackingField.Array.data[5].<Muzzles>k__BackingField.Array.data[5].projectilePrefab
       value: 
       objectReference: {fileID: 5603164780131927710, guid: f9e1b97a2ff24fa40ae852b724f27407, type: 3}
     - target: {fileID: 112509593415485632, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
