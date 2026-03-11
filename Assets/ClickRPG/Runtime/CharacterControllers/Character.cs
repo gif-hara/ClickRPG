@@ -30,6 +30,8 @@ namespace ClickRPG.CharacterControllers
         void Awake()
         {
             brainController.Setup(this, brain);
+            hitPoint.Value = baseStatus.HitPoint;
+            strength.Value = baseStatus.Strength;
         }
 
         public void TakeDamage(int damage)
