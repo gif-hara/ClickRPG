@@ -28,6 +28,10 @@ namespace ClickRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<int> Strength => strength;
 
+        private readonly ReactiveProperty<int> cooldownLevel = new();
+
+        public ReadOnlyReactiveProperty<int> CooldownLevel => cooldownLevel;
+
         public Dictionary<CharacterSkillType, int> SkillPowers { get; } = new();
 
         void Awake()
@@ -35,6 +39,7 @@ namespace ClickRPG.CharacterControllers
             brainController.Setup(this, brain);
             hitPoint.Value = baseStatus.HitPoint;
             strength.Value = baseStatus.Strength;
+            cooldownLevel.Value = baseStatus.CooldownLevel;
         }
 
         public void TakeDamage(int damage)
@@ -73,6 +78,7 @@ namespace ClickRPG.CharacterControllers
                         strength.Value += skill.Power;
                         break;
                     case CharacterSkillType.CooldownLevelUp:
+                        cooldownLevel.Value += skill.Power;
                         break;
                     case CharacterSkillType.CriticalRateUp:
                         break;

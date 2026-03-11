@@ -40,6 +40,7 @@ namespace ClickRPG.ProjectileControllers
                 projectile.transform.SetPositionAndRotation(firePoint.position, firePoint.rotation);
             }
             canFire = false;
+            var coolTime = Mathf.Max(this.coolTime - owner.CooldownLevel.CurrentValue * (1 / 60.0f), 0f);
             await UniTask.Delay(TimeSpan.FromSeconds(coolTime), cancellationToken: owner.destroyCancellationToken);
             canFire = true;
         }
