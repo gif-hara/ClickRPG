@@ -549,6 +549,12 @@ MonoBehaviour:
     <Skills>k__BackingField:
     - <Type>k__BackingField: 7
       <Power>k__BackingField: 30
+    - <Type>k__BackingField: 0
+      <Power>k__BackingField: 0
+    - <Type>k__BackingField: 8
+      <Power>k__BackingField: 0
+    - <Type>k__BackingField: 1
+      <Power>k__BackingField: 1
   player: {fileID: 1412862414}
   uiViews: []
 --- !u!114 &1412862414 stripped
