@@ -28,6 +28,8 @@ namespace ClickRPG.CharacterControllers
 
         public ReadOnlyReactiveProperty<int> Strength => strength;
 
+        public Dictionary<CharacterSkillType, int> SkillPowers { get; } = new();
+
         void Awake()
         {
             brainController.Setup(this, brain);
@@ -46,8 +48,10 @@ namespace ClickRPG.CharacterControllers
 
         public void ApplySkills(List<Skill> skills)
         {
+            SkillPowers.Clear();
             foreach (var skill in skills)
             {
+                SkillPowers[skill.Type] = skill.Power;
                 switch (skill.Type)
                 {
                     case CharacterSkillType.NormalBullet:
