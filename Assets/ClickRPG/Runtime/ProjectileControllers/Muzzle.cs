@@ -17,6 +17,9 @@ namespace ClickRPG.ProjectileControllers
         [SerializeField, Min(0f)]
         private float coolTime = 1.0f;
 
+        [SerializeField, Min(1)]
+        private int spawnCount = 1;
+
         private bool canFire = true;
 
         public void Fire(Character owner)
@@ -31,8 +34,11 @@ namespace ClickRPG.ProjectileControllers
 
         private async UniTask FireAsync(Character owner)
         {
-            var projectile = projectilePrefab.Spawn(owner);
-            projectile.transform.SetPositionAndRotation(firePoint.position, firePoint.rotation);
+            for (int i = 0; i < spawnCount; i++)
+            {
+                var projectile = projectilePrefab.Spawn(owner);
+                projectile.transform.SetPositionAndRotation(firePoint.position, firePoint.rotation);
+            }
             canFire = false;
             await UniTask.Delay(TimeSpan.FromSeconds(coolTime), cancellationToken: owner.destroyCancellationToken);
             canFire = true;
