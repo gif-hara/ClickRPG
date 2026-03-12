@@ -247,7 +247,7 @@ PrefabInstance:
       value: ClickRPG ClickRPG.ValueSelectors.RandomFloat
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
-      propertyPath: 'managedReferences[8726729514358931536]'
+      propertyPath: 'managedReferences[8726729514358931541]'
       value: 'ClickRPG ClickRPG.ValueSelectors.Constant`1[[System.Single, mscorlib]]'
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: managedReferences[8726729464421285969].speed
-      value: 8726729514358931536
+      value: 8726729514358931541
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: managedReferences[8726729464421285972].delay
@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: managedReferences[8726729464421285992].power
-      value: 0.9
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: managedReferences[8726729494092054620].range
@@ -291,7 +291,7 @@ PrefabInstance:
       value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
-      propertyPath: managedReferences[8726729514358931536].value
+      propertyPath: managedReferences[8726729514358931541].value
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7268346679708236256, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7749233361343274076, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: m_Name
-      value: Projectile.Player.MachineGun.1
+      value: Projectile.Player.MachineGun.6
       objectReference: {fileID: 0}
     - target: {fileID: 7749233361343274076, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: m_Layer
