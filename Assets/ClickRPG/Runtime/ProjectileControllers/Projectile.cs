@@ -12,6 +12,9 @@ namespace ClickRPG.ProjectileControllers
         [field: SerializeField]
         public Rigidbody2D Rigidbody2D { get; private set; } = null!;
 
+        [SerializeField, Min(1)]
+        private int penetrationCount = 1;
+
         [SerializeReference, SubclassSelector]
         private List<IProjectileAction> actions = null!;
 
@@ -20,6 +23,8 @@ namespace ClickRPG.ProjectileControllers
         public CompositeDisposable Scope { get; } = new();
 
         public Character Owner { get; private set; } = null!;
+
+        private int currentPenetrationCount;
 
         public Projectile Spawn(Character owner, Vector3 position, Quaternion rotation)
         {
@@ -35,12 +40,22 @@ namespace ClickRPG.ProjectileControllers
             var instance = pool.Get();
             instance.pool = pool;
             instance.Owner = owner;
+            instance.currentPenetrationCount = instance.penetrationCount;
             instance.transform.SetPositionAndRotation(position, rotation);
             foreach (var action in instance.actions)
             {
                 action.Invoke(instance);
             }
             return instance;
+        }
+
+        public void ConsumePenetration()
+        {
+            currentPenetrationCount--;
+            if (currentPenetrationCount <= 0)
+            {
+                Release();
+            }
         }
 
         public void Release()
