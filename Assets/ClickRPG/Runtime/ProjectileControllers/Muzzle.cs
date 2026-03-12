@@ -17,6 +17,9 @@ namespace ClickRPG.ProjectileControllers
         [SerializeField, Min(0f)]
         private float coolTime = 1.0f;
 
+        [SerializeField, Min(0.0f)]
+        private float coolTimeMin = 0.0f;
+
         [SerializeField, Min(1)]
         private int spawnCount = 1;
 
@@ -39,7 +42,7 @@ namespace ClickRPG.ProjectileControllers
                 var projectile = projectilePrefab.Spawn(owner, firePoint.position, firePoint.rotation);
             }
             canFire = false;
-            var coolTime = Mathf.Max(this.coolTime - owner.CooldownLevel.CurrentValue * (1 / 60.0f), 0f);
+            var coolTime = Mathf.Max(this.coolTime - owner.CooldownLevel.CurrentValue * (1 / 60.0f), coolTimeMin);
             await UniTask.Delay(TimeSpan.FromSeconds(coolTime), cancellationToken: owner.destroyCancellationToken);
             canFire = true;
         }
