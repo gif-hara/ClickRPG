@@ -10,12 +10,15 @@ namespace ClickRPG.ProjectileControllers.Actions
     [Serializable]
     public sealed class GiveDamage : IProjectileAction
     {
+        [SerializeField]
+        private Collider2D triggerCollider = null!;
+
         [SerializeField, Min(0f)]
         private float power = 1.0f;
 
         public void Invoke(Projectile projectile)
         {
-            projectile.OnTriggerEnter2DAsObservable()
+            triggerCollider.OnTriggerEnter2DAsObservable()
                 .Subscribe((this, projectile), static (collision, state) =>
                 {
                     var (self, projectile) = state;
