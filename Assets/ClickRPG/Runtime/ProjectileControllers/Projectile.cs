@@ -24,6 +24,8 @@ namespace ClickRPG.ProjectileControllers
 
         public Character Owner { get; private set; } = null!;
 
+        public Character Target { get; set; } = null!;
+
         private int currentPenetrationCount;
 
         public Projectile Spawn(Character owner, Vector3 position, Quaternion rotation)
@@ -40,6 +42,7 @@ namespace ClickRPG.ProjectileControllers
             var instance = pool.Get();
             instance.pool = pool;
             instance.Owner = owner;
+            instance.Target = null;
             instance.currentPenetrationCount = instance.penetrationCount;
             instance.transform.SetPositionAndRotation(position, rotation);
             foreach (var action in instance.actions)
