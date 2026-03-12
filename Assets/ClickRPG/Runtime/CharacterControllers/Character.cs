@@ -8,6 +8,9 @@ namespace ClickRPG.CharacterControllers
 {
     public sealed class Character : MonoBehaviour
     {
+        [field: SerializeField]
+        public Transform SceneView { get; private set; } = null!;
+
         [SerializeReference, SubclassSelector]
         private ICharacterBrain brain = null!;
 
