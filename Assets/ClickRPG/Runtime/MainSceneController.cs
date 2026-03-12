@@ -16,6 +16,7 @@ namespace ClickRPG
 
         private void Start()
         {
+            Application.targetFrameRate = 60;
             var context = new MainSceneContext();
             foreach (var uiView in uiViews)
             {
