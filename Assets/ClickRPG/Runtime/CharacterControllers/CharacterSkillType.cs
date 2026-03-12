@@ -5,7 +5,7 @@ namespace ClickRPG.CharacterControllers
         NormalBullet,
         Shotgun,
         MachineGun,
-        Wide,
+        WideBullet,
         Laser,
         Horming,
         HitPointUp,
