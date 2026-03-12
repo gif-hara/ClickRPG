@@ -65,7 +65,7 @@ namespace ClickRPG.CharacterControllers
                         break;
                     case CharacterSkillType.MachineGun:
                         break;
-                    case CharacterSkillType.Sniper:
+                    case CharacterSkillType.Wide:
                         break;
                     case CharacterSkillType.Laser:
                         break;
