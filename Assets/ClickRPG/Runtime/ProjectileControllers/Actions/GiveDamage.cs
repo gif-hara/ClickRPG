@@ -30,7 +30,7 @@ namespace ClickRPG.ProjectileControllers.Actions
                     {
                         var damage = (int)(projectile.Owner.Strength.CurrentValue * self.power);
                         target.TakeDamage(damage);
-                        projectile.Release();
+                        projectile.ConsumePenetration();
                     }
                 })
                 .AddTo(projectile.Scope);
