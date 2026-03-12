@@ -191,6 +191,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
+      propertyPath: penetrationCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: actions.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -241,6 +245,10 @@ PrefabInstance:
     - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: managedReferences[8726729494092054810].value
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 82304448078070065, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
+      propertyPath: managedReferences[8726729464421285992].triggerCollider
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7268346679708236256, guid: de9c0acce18647d49b1137905bf6a08e, type: 3}
       propertyPath: m_LocalPosition.x
