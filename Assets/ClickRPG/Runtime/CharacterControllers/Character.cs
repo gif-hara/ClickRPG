@@ -97,15 +97,10 @@ namespace ClickRPG.CharacterControllers
                 switch (skill.Type)
                 {
                     case CharacterSkillType.NormalBullet:
-                        break;
                     case CharacterSkillType.Shotgun:
-                        break;
                     case CharacterSkillType.MachineGun:
-                        break;
                     case CharacterSkillType.WideBullet:
-                        break;
                     case CharacterSkillType.Laser:
-                        break;
                     case CharacterSkillType.Horming:
                         break;
                     case CharacterSkillType.HitPointUp:
