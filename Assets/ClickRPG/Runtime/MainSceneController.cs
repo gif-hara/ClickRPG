@@ -1,4 +1,6 @@
 using ClickRPG.CharacterControllers;
+using ClickRPG.StageControllers;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace ClickRPG
@@ -14,7 +16,13 @@ namespace ClickRPG
         [SerializeField]
         private UIView[] uiViews = null!;
 
-        private void Start()
+        [SerializeField]
+        private StageActionBundle stageActionBundle = null!;
+
+        [SerializeField]
+        private int stageActionStartIndex = 0;
+
+        private async UniTaskVoid Start()
         {
             Application.targetFrameRate = 60;
             var context = new MainSceneContext();
@@ -23,6 +31,8 @@ namespace ClickRPG
                 uiView.Activate(context);
             }
             player.ApplySkills(userData.Skills);
+
+            await stageActionBundle.InvokeAsync(player, stageActionStartIndex, destroyCancellationToken);
         }
     }
 }
