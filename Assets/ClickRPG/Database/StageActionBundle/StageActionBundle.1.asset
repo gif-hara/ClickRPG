@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49596074d3402243a72b849d43497fa, type: 3}
+  m_Name: StageActionBundle.1
+  m_EditorClassIdentifier: ClickRPG::ClickRPG.StageControllers.StageActionBundle
+  actions:
+  - rid: 8726729514358931775
+  - rid: 8726729514358931777
+  references:
+    version: 2
+    RefIds:
+    - rid: 8726729514358931775
+      type: {class: Delay, ns: ClickRPG.StageControllers.Actions, asm: ClickRPG}
+      data:
+        delayTime:
+          rid: 8726729514358931776
+    - rid: 8726729514358931776
+      type: {class: 'Constant`1[[System.Single, mscorlib]]', ns: ClickRPG.ValueSelectors, asm: ClickRPG}
+      data:
+        value: 2
+    - rid: 8726729514358931777
+      type: {class: SpawnEnemy, ns: ClickRPG.StageControllers.Actions, asm: ClickRPG}
+      data:
+        enemyPrefab: {fileID: 2959929648261043889, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
+        radius: 10
+        spawnCount: 1
