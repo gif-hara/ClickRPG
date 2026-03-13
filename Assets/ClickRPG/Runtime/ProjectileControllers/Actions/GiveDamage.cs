@@ -1,6 +1,5 @@
 using System;
 using ClickRPG.CharacterControllers;
-using ClickRPG.CharacterControllers.Abilities;
 using R3;
 using R3.Triggers;
 using UnityEngine;
