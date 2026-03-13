@@ -1,12 +1,14 @@
+using System;
 using System.Collections.Generic;
 using ClickRPG.CharacterControllers.Brains;
 using R3;
 using SoulLike;
 using UnityEngine;
+using UnityEngine.Pool;
 
 namespace ClickRPG.CharacterControllers
 {
-    public sealed class Character : MonoBehaviour
+    public sealed class Character : MonoBehaviour, IDisposable
     {
         [field: SerializeField]
         public Transform SceneView { get; private set; } = null!;
@@ -37,6 +39,22 @@ namespace ClickRPG.CharacterControllers
 
         public Dictionary<CharacterSkillType, int> SkillPowers { get; } = new();
 
+        private ObjectPool<Character> pool = null!;
+
+        public CompositeDisposable Scope { get; } = new();
+
+        public void Dispose()
+        {
+            if (pool != null)
+            {
+                pool.Release(this);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
         void Awake()
         {
             brainController.Setup(this, brain);
@@ -45,12 +63,28 @@ namespace ClickRPG.CharacterControllers
             cooldownLevel.Value = baseStatus.CooldownLevel;
         }
 
+        public void Spawn(Vector3 position)
+        {
+            pool ??= new ObjectPool<Character>(
+                createFunc: () => Instantiate(this),
+                actionOnRelease: character =>
+                {
+                    character.gameObject.SetActive(false);
+                    character.Scope.Clear();
+                },
+                actionOnGet: character => character.gameObject.SetActive(true)
+                );
+            var instance = pool.Get();
+            instance.pool = pool;
+            instance.transform.position = position;
+        }
+
         public void TakeDamage(int damage)
         {
             hitPoint.Value = Mathf.Max(hitPoint.Value - damage, 0);
-            if (hitPoint.Value == 0)
+            if (hitPoint.Value <= 0)
             {
-                Destroy(gameObject);
+                Dispose();
             }
         }
 
