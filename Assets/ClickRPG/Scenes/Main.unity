@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &318876014 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7393040889163708981, guid: 5c060d80ae526a24aa1b069daf720667, type: 3}
-  m_PrefabInstance: {fileID: 435800049}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &435800049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,10 +131,6 @@ PrefabInstance:
       propertyPath: managedReferences[8726729447078101077].worldCamera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 2959929648261043889, guid: 5c060d80ae526a24aa1b069daf720667, type: 3}
-      propertyPath: managedReferences[8726729447078101077].muzzleObject
-      value: 
-      objectReference: {fileID: 318876014}
     - target: {fileID: 4024369720686143140, guid: 5c060d80ae526a24aa1b069daf720667, type: 3}
       propertyPath: m_Name
       value: Character.Player
@@ -150,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4066561737044013996, guid: 5c060d80ae526a24aa1b069daf720667, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4066561737044013996, guid: 5c060d80ae526a24aa1b069daf720667, type: 3}
       propertyPath: m_LocalPosition.z
@@ -295,7 +286,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -397,7 +388,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 20, y: 20}
   m_AdaptiveModeThreshold: 0.503
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -412,7 +403,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -547,16 +538,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: ClickRPG::ClickRPG.MainSceneController
   userData:
     <Skills>k__BackingField:
-    - <Type>k__BackingField: 7
-      <Power>k__BackingField: 30
     - <Type>k__BackingField: 0
+      <Power>k__BackingField: 0
+    - <Type>k__BackingField: 1
+      <Power>k__BackingField: 0
+    - <Type>k__BackingField: 2
+      <Power>k__BackingField: 0
+    - <Type>k__BackingField: 3
+      <Power>k__BackingField: 0
+    - <Type>k__BackingField: 4
+      <Power>k__BackingField: 0
+    - <Type>k__BackingField: 5
+      <Power>k__BackingField: 6
+    - <Type>k__BackingField: 7
       <Power>k__BackingField: 0
     - <Type>k__BackingField: 8
       <Power>k__BackingField: 0
-    - <Type>k__BackingField: 1
-      <Power>k__BackingField: 1
   player: {fileID: 1412862414}
   uiViews: []
+  stageActionBundle: {fileID: 11400000, guid: 383d45fd78eee5743823f100facec700, type: 2}
+  stageActionStartIndex: 0
 --- !u!114 &1412862414 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2959929648261043889, guid: 5c060d80ae526a24aa1b069daf720667, type: 3}
@@ -568,63 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27060deb62bd1174d8f48ef9799ee8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ClickRPG::ClickRPG.CharacterControllers.Character
---- !u!1001 &1928551432
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4024369720686143140, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_Name
-      value: Character.Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4066561737044013996, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cde57b5e1f5cfb942a15f77bd22e5641, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -634,4 +578,3 @@ SceneRoots:
   - {fileID: 1292857055}
   - {fileID: 570683200}
   - {fileID: 435800049}
-  - {fileID: 1928551432}
