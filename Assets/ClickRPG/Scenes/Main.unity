@@ -539,7 +539,7 @@ MonoBehaviour:
   userData:
     <Skills>k__BackingField:
     - <Type>k__BackingField: 0
-      <Power>k__BackingField: 0
+      <Power>k__BackingField: 1
     - <Type>k__BackingField: 1
       <Power>k__BackingField: 0
     - <Type>k__BackingField: 2
@@ -549,7 +549,7 @@ MonoBehaviour:
     - <Type>k__BackingField: 4
       <Power>k__BackingField: 0
     - <Type>k__BackingField: 5
-      <Power>k__BackingField: 6
+      <Power>k__BackingField: 0
     - <Type>k__BackingField: 7
       <Power>k__BackingField: 0
     - <Type>k__BackingField: 8
