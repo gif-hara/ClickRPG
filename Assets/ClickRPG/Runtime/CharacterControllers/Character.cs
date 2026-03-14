@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
 using ClickRPG.CharacterControllers.Brains;
+using Cysharp.Threading.Tasks;
+using HKFeedback;
+using HKFeedback.Extensions;
 using R3;
 using SoulLike;
 using UnityEngine;
@@ -8,7 +11,13 @@ using UnityEngine.Pool;
 
 namespace ClickRPG.CharacterControllers
 {
-    public sealed class Character : MonoBehaviour, IDisposable
+    public sealed class Character :
+        MonoBehaviour,
+        IDisposable,
+        IProvider<Character>,
+        IProvider<Transform>,
+        IProvider<IDisposable>,
+        IProvider<GameObject>
     {
         [field: SerializeField]
         public Transform SceneView { get; private set; } = null!;
@@ -18,6 +27,9 @@ namespace ClickRPG.CharacterControllers
 
         [SerializeField]
         private CharacterStatus baseStatus = null!;
+
+        [SerializeField]
+        private List<FeedbackElement> feedbackElements = null!;
 
         private readonly MessageBroker broker = new();
 
@@ -55,12 +67,37 @@ namespace ClickRPG.CharacterControllers
             }
         }
 
+        Character IProvider<Character>.Provide() => this;
+
+        Transform IProvider<Transform>.Provide() => transform;
+
+        IDisposable IProvider<IDisposable>.Provide() => this;
+
+        GameObject IProvider<GameObject>.Provide() => gameObject;
+
         void Awake()
         {
             brainController.Setup(this, brain);
             hitPoint.Value = baseStatus.HitPoint;
             strength.Value = baseStatus.Strength;
             cooldownLevel.Value = baseStatus.CooldownLevel;
+
+            foreach (var element in feedbackElements)
+            {
+                var observable = element.EventType switch
+                {
+                    CharacterEvent.EventType.Died => broker.Receive<CharacterEvent.Died>().AsUnitObservable(),
+                    CharacterEvent.EventType.DamageToken => broker.Receive<CharacterEvent.DamageToken>().AsUnitObservable(),
+                    _ => throw new ArgumentOutOfRangeException()
+                };
+                observable
+                    .Subscribe((this, element), static (_, state) =>
+                    {
+                        var (character, feedbackElement) = state;
+                        feedbackElement.Feedbacks.PlayAsync(character, character.destroyCancellationToken).Forget();
+                    })
+                    .RegisterTo(destroyCancellationToken);
+            }
         }
 
         public void Spawn(Vector3 position)
@@ -82,9 +119,10 @@ namespace ClickRPG.CharacterControllers
         public void TakeDamage(int damage)
         {
             hitPoint.Value = Mathf.Max(hitPoint.Value - damage, 0);
+            broker.Publish(new CharacterEvent.DamageToken(damage));
             if (hitPoint.Value <= 0)
             {
-                Dispose();
+                broker.Publish(new CharacterEvent.Died());
             }
         }
 
@@ -132,6 +170,16 @@ namespace ClickRPG.CharacterControllers
                         break;
                 }
             }
+        }
+
+        [Serializable]
+        public sealed class FeedbackElement
+        {
+            [field: SerializeField]
+            public CharacterEvent.EventType EventType { get; private set; } = default;
+
+            [field: SerializeReference, SubclassSelector]
+            public IFeedback<Character>[] Feedbacks { get; private set; } = null!;
         }
     }
 }
