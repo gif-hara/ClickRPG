@@ -1830,6 +1830,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7393040889163708981}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: feedbackElements.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: baseStatus.<HitPoint>k__BackingField
       value: 1
       objectReference: {fileID: 0}
@@ -1840,6 +1844,15 @@ PrefabInstance:
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: 'managedReferences[8726729464421285983]'
       value: ClickRPG ClickRPG.CharacterControllers.Abilities.CharacterHandleStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: 'managedReferences[8726729550845968590]'
+      value: 'HKFeedback HKFeedback.Actions.SetActiveGameObject`1[[ClickRPG.CharacterControllers.Character,
+        ClickRPG]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: managedReferences[8726729550845968590].isActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].worldCamera
@@ -1878,6 +1891,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: feedbackElements.Array.data[0].<Feedbacks>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729447078101077].muzzleElements.list.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -1904,6 +1921,10 @@ PrefabInstance:
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: 'managedReferences[8726729447078101077].muzzleSkillTypes.Array.data[5]'
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
+      propertyPath: 'feedbackElements.Array.data[0].<Feedbacks>k__BackingField.Array.data[0]'
+      value: 8726729550845968590
       objectReference: {fileID: 0}
     - target: {fileID: -6970146961899882283, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: managedReferences[8726729464421285983].baseStatus.<HitPoint>k__BackingField
@@ -5459,7 +5480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1025004647757864392, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1025004647757864392, guid: ee2b7cc565dbe7c40b54e3b6352bcab1, type: 3}
       propertyPath: m_LocalPosition.z
