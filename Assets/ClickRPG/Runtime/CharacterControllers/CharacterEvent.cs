@@ -2,6 +2,12 @@ namespace ClickRPG.CharacterControllers
 {
     public static class CharacterEvent
     {
+        public enum EventType
+        {
+            Died,
+            DamageToken,
+        }
+
         public readonly struct Died
         {
         }
